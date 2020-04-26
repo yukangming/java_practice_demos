@@ -1,3 +1,5 @@
+import java.util.Set;
+
 /*
  * @lc app=leetcode id=141 lang=java
  *
@@ -18,7 +20,16 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        
+        Set<ListNode> node=new HashSet<>();
+        while(head!=null){
+            if(node.contains(head)){
+                return true;
+            }else{
+                node.add(head);
+            }
+            head=head.next;
+        }
+        return false;
     }
 }
 // @lc code=end
