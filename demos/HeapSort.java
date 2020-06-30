@@ -36,7 +36,7 @@ public class HeapSort {
             buildHeap(array, array.length - i);
             int temp = array[0];
             array[0] = array[index - i];
-            array[index] = temp;
+            array[index - i] = temp;
         }
     }
 
