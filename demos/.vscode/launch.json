@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - HeapSort",
+            "request": "launch",
+            "mainClass": "HeapSort",
+            "projectName": "demos_48a5bf05"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Test",
             "request": "launch",
             "mainClass": "Test",

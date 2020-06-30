@@ -36,7 +36,7 @@ public class BubbleSort {
         int tmp =0;
         int lastExchangeIndex = 0;
         int sortBorder = array.length-1;
-        for(int i =0; i<array.length; i++){
+        for(int i =0; i<array.length-1; i++){
             boolean isSorted = true;
             for(int j = 0; j<sortBorder;j++){
                 if(array[j]>array[j+1]){
