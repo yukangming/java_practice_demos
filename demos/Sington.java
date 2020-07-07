@@ -1,7 +1,7 @@
 public class Sington {
     private volatile static Sington uniqueInstance;
     private Sington() {};
-    public Sington getSington() {
+    public synchronized Sington getSington() {
         if (uniqueInstance == null) {
             uniqueInstance = new Sington();
         }
