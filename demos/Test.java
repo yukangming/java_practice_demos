@@ -1,6 +1,8 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
+/**
+ *  a reflection example
+ */
 public class Test{
     public static void main(String[] args) throws IllegalAccessException,InstantiationError,NoSuchMethodException,InvocationTargetException,
             InstantiationException {
