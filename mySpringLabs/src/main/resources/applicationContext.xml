@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="person" class="com.yukangming.basic.Person"/>-->
+<!--    <bean id="person1" class="com.yukangming.basic.Person"/>-->
+
+
+    <bean id="person" class="com.yukangming.basic.Person">
+        <property name="id">
+            <value>10</value>
+        </property>
+        <property name="name">
+            <value>xiaojr</value>
+        </property>
+        <property name="emails">
+            <list>
+                <value>nashinianshaoyuyu@gmail.com</value>
+                <value>1540622095@qq.com</value>
+            </list>
+        </property>
+        <property name="tels">
+            <set>
+                <value>123456</value>
+                <value>14567999</value>
+                <value>16677333</value>
+            </set>
+        </property>
+        <property name="addresses">
+            <list>
+                <value>china</value>
+                <value>england</value>
+                <value>hongkong</value>
+            </list>
+        </property>
+        <property name="qqs">
+            <map>
+                <entry>
+                    <key><value>yukangming</value></key>
+                    <value>1540622095</value>
+                </entry>
+                <entry>
+                    <key><value>zhangjunhun</value></key>
+                    <value>289931618</value>
+                </entry>
+            </map>
+        </property>
+        <property name="p">
+            <props>
+                <prop key="key1">KangmingYu</prop>
+                <prop key="key2">Kangkang</prop>
+            </props>
+        </property>
+    </bean>
+
+<!--    <bean id="userService" class="com.yukangming.basic.UserServiceImpl">-->
+<!--        <property name="userDao">-->
+<!--            <bean class="com.yukangming.basic.UserDaoImpl"/>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <bean id="userDao" class="com.yukangming.basic.UserDaoImpl"/>
+
+    <bean id="userService" class="com.yukangming.basic.UserServiceImpl">
+        <property name="userDao">
+            <ref bean="userDao"/>
+        </property>
+    </bean>
+</beans>
