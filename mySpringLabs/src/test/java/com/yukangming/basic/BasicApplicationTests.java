@@ -1,10 +1,24 @@
 package com.yukangming.basic;
 
+import com.yukangming.basic.constructer.Customer;
+import com.yukangming.beanpost.Category;
+import com.yukangming.factorybean.ConnectionFactory;
+import com.yukangming.factorybean.ConnectionFactoryBean;
+import com.yukangming.proxy.OrderService;
+import com.yukangming.proxy.OrderServiceImpl;
+import com.yukangming.proxy.OrderServiceProxy;
+import com.yukangming.proxy.UserServiceProxy;
+import com.yukangming.scope.Account;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -120,5 +134,127 @@ public class BasicApplicationTests {
         userService.register(new User("yukangming", "123456"));
         userService.login("kangkang", "9898987");
     }
+
+    @Test
+    public void test8() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        Customer customer = (Customer) ctx.getBean("customer");
+
+        System.out.println("customer is "+customer);
+    }
+
+    @Test
+    public void test9() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        Connection conn = (Connection) ctx.getBean("conn");
+        Connection conn2 = (Connection) ctx.getBean("conn");
+
+        System.out.println("conn is "+ conn);
+        System.out.println("conn is "+ conn2);
+
+    }
+
+
+    @Test
+    public void test10() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        Connection conn = (Connection) ctx.getBean("conn");
+
+        System.out.println("conn is "+ conn);
+//        Connection object = (Connection) conn.getObject();
+//        object.close();
+    }
+
+    @Test
+    public void test11() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        Connection conn = (Connection) ctx.getBean("conn");
+        System.out.println("hahah the error is here");
+        System.out.println(conn);
+
+    }
+
+    @Test
+    public void test12() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        Account account1 = (Account) ctx.getBean("account");
+        Account account2 = (Account) ctx.getBean("account");
+        System.out.println(account1);
+        System.out.println(account2);
+    }
+
+    @Test
+    public void test13() {
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        Object product = ctx.getBean("product");
+        ctx.close();
+    }
+
+    @Test
+    public void test14() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext1.xml");
+        Connection conn = (Connection) ctx.getBean("conn");
+        System.out.println(conn);
+    }
+
+    @Test
+    public void test15() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext2.xml");
+        com.yukangming.convertor.Person person = (com.yukangming.convertor.Person) ctx.getBean("person");
+        System.out.println(person.getBirthday());
+    }
+
+    @Test
+    public void test16() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext3.xml");
+        Category category = (Category) ctx.getBean("category");
+        System.out.println("name is "+category.getName());
+    }
+
+    @Test
+    public void test17() {
+        UserService userService = new UserServiceProxy();
+        userService.login("yukangming", "123456");
+        userService.register(new User());
+        System.out.println("--------------");
+
+        OrderService orderService = new OrderServiceProxy();
+        orderService.showOrder();
+
+    }
+
+    @Test
+    public void  test18() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
+        UserService userService = (UserService) ctx.getBean("userService1");
+
+        userService.login("yukangming", "111111");
+        userService.register(new User());
+    }
+
+    @Test
+    public void test19() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext4.xml");
+        com.yukangming.factory.UserService userService = (com.yukangming.factory.UserService) ctx.getBean("userService");
+        userService.login("yukangming", "77777");
+        userService.register(new User());
+    }
+
+    @Test
+    public void test20() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext5.xml");
+        com.yukangming.aspect.UserService userService = (com.yukangming.aspect.UserService) ctx.getBean("userService");
+        userService.login("yukangming", "77777");
+        userService.register(new User());
+    }
+
+    @Test
+    public void test21() {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext();
+
+    }
+
+
+
 
 }
