@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springmvc_day01" />
         <module name="springmvcday01_1" />
+        <module name="springmvc_day02" />
+        <module name="springmvc_day01" />
+        <module name="ssm_springmvc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
