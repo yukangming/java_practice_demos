@@ -31,7 +31,7 @@ func (self *Thread) CurrentFrame() *Frame {
 
 }
 
-// func (self *Thread) NewFrame(maxLocals, maxStack uint) *Frame {
-// 	return newFrame(self, maxLocals, maxStack)
-// }
+func (self *Thread) NewFrame(maxLocals, maxStack uint) *Frame {
+	return newFrame(self, maxLocals, maxStack)
+}
 	
