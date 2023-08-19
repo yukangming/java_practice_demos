@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1" />
@@ -19,6 +20,7 @@
         <option value="$PROJECT_DIR$/SpringMVCLabs/springmvc_day02/pom.xml" />
         <option value="$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1/pom.xml" />
         <option value="$PROJECT_DIR$/mySpringLabs/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisDemo/pom.xml" />
       </list>
     </option>
   </component>
