@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mySpringLabs/basic.iml" filepath="$PROJECT_DIR$/mySpringLabs/basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01/springmvc_day01.iml" filepath="$PROJECT_DIR$/SpringMVCLabs/springmvc_day01/springmvc_day01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1/springmvc_day01_1.iml" filepath="$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1/springmvc_day01_1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day02/springmvc_day02.iml" filepath="$PROJECT_DIR$/SpringMVCLabs/springmvc_day02/springmvc_day02.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVCLabs/springmvcday01_1/springmvcday01_1.iml" filepath="$PROJECT_DIR$/SpringMVCLabs/springmvcday01_1/springmvcday01_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVCLabs/ssm_springmvc/ssm_springmvc.iml" filepath="$PROJECT_DIR$/SpringMVCLabs/ssm_springmvc/ssm_springmvc.iml" />
     </modules>
