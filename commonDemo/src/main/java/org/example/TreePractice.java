@@ -234,9 +234,9 @@ public class TreePractice {
             this.isBalance = isBalance;
         }
 
-        private int height;
+        private final int height;
 
-        private boolean isBalance;
+        private final boolean isBalance;
     }
 
     public ReturnType process(Node head) {
@@ -305,6 +305,30 @@ public class TreePractice {
         }
 
         return new ReturnData(isBST, max, min);
+    }
+
+
+    /**
+     * 查找最近公共祖先
+     * @param head
+     * @param o1
+     * @param o2
+     * @return
+     */
+    public Node lowestAncestor(Node head, Node o1, Node o2) {
+        if (head == null || head == o1 || head == o2) {
+            return head;
+        }
+
+        Node node = lowestAncestor(head.left, o1, o2);
+        Node node1 = lowestAncestor(head.right, o1, o2);
+
+        if (node != null && node1 != null) {
+            return head;
+        }
+
+
+        return node1 == null ? node : node1;
     }
 
 
