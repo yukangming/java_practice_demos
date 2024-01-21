@@ -13,13 +13,16 @@ public class ThreadLimiter {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Hello world!");
 
-//        RateLimiter rateLimiter = RateLimiter.create(5);
-//        System.out.println(rateLimiter.acquire(5));
-//        System.out.println(rateLimiter.acquire(3));
-//        System.out.println(rateLimiter.acquire(2));
-//        System.out.println(rateLimiter.acquire(1));
-//        System.out.println(rateLimiter.tryAcquire(5));
-//        System.out.println(rateLimiter.tryAcquire(Duration.ofSeconds(5)));
+        RateLimiter rateLimiter = RateLimiter.create(5);
+        System.out.println(rateLimiter.acquire(5));
+        System.out.println(rateLimiter.acquire(3));
+        System.out.println(rateLimiter.acquire(2));
+        System.out.println(rateLimiter.acquire(1));
+        System.out.println(rateLimiter.tryAcquire(5));
+        System.out.println(rateLimiter.tryAcquire(Duration.ofSeconds(5)));
+        System.out.println("使用guava包实现限流逻辑");
+        System.out.println("next method");
+
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,
                 10, 1000,
                 TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>() {
@@ -45,6 +48,7 @@ public class ThreadLimiter {
         }
 
         countDownLatch.await();
+        threadPoolExecutor.shutdownNow();
         System.out.println("成功结素测试咯");
 
     }
