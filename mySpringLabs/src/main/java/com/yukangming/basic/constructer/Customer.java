@@ -2,6 +2,9 @@ package com.yukangming.basic.constructer;
 
 import java.io.Serializable;
 
+/**
+ * @author yukangming
+ */
 public class Customer implements Serializable {
     private String name;
     private int age;
