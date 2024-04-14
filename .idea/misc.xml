@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring-boot-lab" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1" />
     <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day02" />
@@ -21,8 +22,10 @@
         <option value="$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1/pom.xml" />
         <option value="$PROJECT_DIR$/mySpringLabs/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/commonDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-lab/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
