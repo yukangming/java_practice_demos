@@ -2,6 +2,7 @@ package org.example;
 
 import lombok.Data;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.LockSupport;
 
 /**
@@ -16,6 +17,8 @@ public class LockSupportTest {
     @Data
     static class ThreadExample implements Runnable {
 
+        private AtomicInteger count;
+
         private String name;
 
         @Override
@@ -25,6 +28,7 @@ public class LockSupportTest {
                 System.out.println("先执行一下unPark试试");
                 LockSupport.unpark(Thread.currentThread());
                 System.out.println("现在运行的是" + getName() + "线程");
+                System.out.println("第" + getCount().getAndIncrement() + "次运行");
                 LockSupport.park();
 
                 System.out.println("执行park方法后");
@@ -39,19 +43,24 @@ public class LockSupportTest {
         ThreadExample threadExample1 = new ThreadExample();
 
         threadExample.setName("t1hhh");
+        threadExample.setCount(new AtomicInteger(1));
         threadExample1.setName("t1hhhh");
         Thread t1hhhh = new Thread(threadExample, "t1hhhh");
 
         t1hhhh.start();
+
+//         这里可以看出，不能调用多次start方法，不然会抛出IllegalThreadStateException
+//        t1hhhh.start();
+//        t1hhhh.start();
         Thread.sleep(10000);
         Thread t1hhhh1 = new Thread(threadExample1, "t1hhhh");
         t1hhhh1.start();
-//        LockSupport.unpark(t1hhhh);
-//        LockSupport.unpark(t1hhhh1);
+        LockSupport.unpark(t1hhhh);
+        LockSupport.unpark(t1hhhh1);
 
-        // 这里仅仅是为了等这两个子线程完成之后打印主线程的语句
-//        t1hhhh.join();
-//        t1hhhh1.join();
+//         这里仅仅是为了等这两个子线程完成之后打印主线程的语句
+        t1hhhh.join();
+        t1hhhh1.join();
 
         System.out.println("主函数等待两个线程都执行完park和unPark方法咯");
     }
