@@ -2,9 +2,7 @@ package org.example;
 
 import lombok.Data;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author ykm
@@ -48,6 +46,11 @@ public class TreePractice {
         System.out.println("判断是否是二叉搜索树");
         Boolean b = checkBST2(head);
         System.out.println(b);
+        List<ListNodeTest> myList = new ArrayList<>();
+        while (true) {
+            System.out.println("开始转起来咯");
+            myList.add(new ListNodeTest());
+        }
 
 
     }

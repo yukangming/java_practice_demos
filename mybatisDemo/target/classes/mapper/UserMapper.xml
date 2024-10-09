@@ -2,8 +2,24 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="UserMapper">
+<mapper namespace="org.example.mapper.UserMapper">
     <select id="selectUser" resultType="org.example.entity.User">
         select * from User where id = #{id}
+    </select>
+
+    <insert id="insertUser" parameterType="org.example.entity.User">
+        insert into user values(#{id}, #{userName}, #{password})
+    </insert>
+
+    <select id="selectByCondition" parameterType="org.example.entity.User" resultType="org.example.entity.User">
+        select * from user
+        <where>
+            <if test="id!=0">
+                and id = #{id}
+            </if>
+            <if test="userName!=null">
+                and userName = #{userName}
+            </if>
+        </where>
     </select>
 </mapper>
