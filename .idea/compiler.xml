@@ -11,19 +11,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-lab" />
-        <module name="springmvc_day01_1" />
         <module name="ssm_springmvc" />
-        <module name="springmvc_day01" />
-        <module name="mybatisDemo" />
-        <module name="springmvcday01_1" />
-        <module name="basic" />
-        <module name="commonDemo" />
-        <module name="springmvc_day02" />
+        <module name="mybatis-demo" />
+        <module name="common-demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="activiti-lab" target="17" />
+      <module name="basic" target="1.8" />
+      <module name="springmvc_day01" target="1.7" />
+      <module name="springmvc_day01_1" target="1.7" />
+      <module name="springmvc_day02" target="1.7" />
+      <module name="springmvcday01_1" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="activiti-lab" options="-parameters" />
       <module name="spring-boot-lab" options="-parameters" />
     </option>
   </component>

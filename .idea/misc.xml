@@ -3,11 +3,11 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/spring-boot-lab" />
-    <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01" />
-    <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1" />
-    <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day02" />
-    <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/springmvcday01_1" />
-    <file type="web" url="file://$PROJECT_DIR$/SpringMVCLabs/ssm_springmvc" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day01" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day01_1" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day02" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvcday01_1" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-mvc-Labs/ssm_springmvc" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -24,7 +24,16 @@
         <option value="$PROJECT_DIR$/mybatisDemo/pom.xml" />
         <option value="$PROJECT_DIR$/commonDemo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-lab/pom.xml" />
+        <option value="$PROJECT_DIR$/activiti-lab/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc-Labs/ssm_springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/common-demo/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/activiti-lab/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

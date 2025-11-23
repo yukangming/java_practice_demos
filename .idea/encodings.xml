@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day01_1/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day02/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvc_day02/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvcday01_1/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/springmvcday01_1/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/ssm_springmvc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SpringMVCLabs/ssm_springmvc/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/commonDemo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/commonDemo/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mySpringLabs/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mySpringLabs/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatisDemo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mybatisDemo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activiti-lab/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activiti-lab/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-spring-Labs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-spring-Labs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-lab/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-lab/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day01/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day01_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day01_1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvc_day02/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvcday01_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/springmvcday01_1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/ssm_springmvc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-Labs/ssm_springmvc/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

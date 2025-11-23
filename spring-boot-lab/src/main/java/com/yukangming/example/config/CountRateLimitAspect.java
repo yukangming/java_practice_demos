@@ -1,9 +1,8 @@
 package com.yukangming.example.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -23,9 +22,37 @@ public class CountRateLimitAspect {
     /**
      * 这里本来想直接匹配所有方法的，结果匹配不上呜呜呜
      */
-//    @Pointcut(value = "execution(* com.yukangming.example.*.*(..))")
     @Pointcut(value = "execution(* test*(..))")
     public void beforePointCut() {
+    }
+
+    @Pointcut(value = "execution(* test*(..))")
+    public void afterPointCut() {
+
+    }
+
+
+    /**
+     * 代理方法执行增强逻辑时发生异常也会导致被拦截的业务方法执行失败
+     * @param joinPoint
+     */
+    @After("afterPointCut()")
+    public void afterPointCut(JoinPoint joinPoint) {
+        String declaringTypeName = joinPoint.getSignature().getDeclaringTypeName();
+        System.out.println("后置增强逻辑" + declaringTypeName);
+//        throw new RuntimeException("这是后置增强逻辑导致的异常");
+    }
+
+    @Pointcut(value = "execution(* test*(..))")
+    public void afterReturningPointCut() {
+
+    }
+
+    @AfterReturning("afterReturningPointCut()")
+    public void afterReturningPointCut(JoinPoint joinPoint) {
+        String declaringTypeName = joinPoint.getSignature().getDeclaringTypeName();
+        System.out.println(declaringTypeName);
+        throw new RuntimeException("这个是afterReturningPointCut增强逻辑抛出的异常");
     }
 
 
@@ -35,6 +62,8 @@ public class CountRateLimitAspect {
      */
     @Before("beforePointCut()")
     public void doBeforeTest() {
+        System.out.println("从前置增强逻辑里面抛出异常看看会不会影响业务逻辑");
+//        throw new RuntimeException("这是从前置增强逻辑里面抛出的异常");
         System.out.println("this is my before advice check");
     }
 
